@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>python-bot</Name>
+  <Repository>akiran24/python-bot</Repository>
+  <Registry>https://hub.docker.com/r/akiran24/python-bot</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview>Telegram bot pour télécharger des films depuis TamilMV via qBittorrent</Overview>
+  <Category>Downloaders:</Category>
+  <Config Name="Bot Token" Target="BOT_TOKEN" Default="" Description="Telegram Bot Token" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="TamilMV URL" Target="TAMILMV_URL" Default="https://www.1tamilmv.com" Description="URL de TamilMV" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="FlareSolverr URL" Target="FLARE_URL" Default="http://flaresolverr:8191/v1" Description="URL de FlareSolverr" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="qBittorrent URL" Target="QB_URL" Default="http://qbittorrent:8080" Description="URL de qBittorrent" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="qBittorrent Username" Target="QB_USERNAME" Default="admin" Description="Username qBittorrent" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="qBittorrent Password" Target="QB_PASSWORD" Default="" Description="Password qBittorrent" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Proxy URL" Target="PROXY_URL" Default="" Description="Proxy host" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Proxy Port" Target="PROXY_PORT" Default="1080" Description="Proxy port" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Proxy User" Target="PROXY_USER" Default="" Description="Proxy username" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Proxy Password" Target="PROXY_PASS" Default="" Description="Proxy password" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="GitHub Repo URL" Target="GITHUB_REPO_URL" Default="" Description="URL complète du repo GitHub ex: https://github.com/USER/REPO.git" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="GitHub Token" Target="GITHUB_TOKEN" Default="" Description="GitHub Personal Access Token" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Dossier racine films" Target="DEST_ROOT" Default="/movies" Description="Chemin racine des films dans le container" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Folder Paths" Target="FOLDER_PATHS" Default="tamil_movies_old,tamil_movies_new,tamil_movies_hd,tamil_movies_old,tamil_serials" Description="Dossiers séparés par virgule" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Categorie List" Target="CATEGORIE_LIST" Default="11-web-hd-itunes-hd-bluray,10-predvd-dvdscr-cam-tc,11-web-hd-itunes-hd-bluray,12-hd-rips-dvd-rips-br-rips,19-web-series-tv-shows" Description="Catégories TamilMV séparées par virgule" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Films" Target="/movies" Default="/mnt/user/movies" Description="Dossier films sur le host Unraid" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
